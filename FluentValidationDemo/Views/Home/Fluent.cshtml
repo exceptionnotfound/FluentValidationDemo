@@ -1,0 +1,37 @@
+﻿@model FluentValidationDemo.ViewModels.Home.AddFluentMovieVM
+
+@{
+    ViewBag.Title = "Add a Movie";
+}
+
+<h2>Add a Movie (Fluent Validation)</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        <div>
+            @Html.LabelFor(x => x.Title)
+            @Html.TextBoxFor(x => x.Title)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.ReleaseDate)
+            @Html.TextBoxFor(x => x.ReleaseDate)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.RunningTimeMinutes)
+            @Html.TextBoxFor(x => x.RunningTimeMinutes)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.LeadingActor)
+            @Html.TextBoxFor(x => x.LeadingActor)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.SupportingActor)
+            @Html.TextBoxFor(x => x.SupportingActor)
+        </div>
+        <div>
+            <input type="submit" value="Go!" />
+        </div>
+    </div>
+}
